@@ -10,9 +10,11 @@
   "scripts": {
     "dev": "parcel ./src/index.html",
     "prebuild": "npx rimraf build",
-    "build": "parcel build --public-url ./ ./src/index.html --experimental-scope-hoisting --out-dir build"
+    "build": "parcel build --public-url ./ ./src/index.html --out-dir build"
   },
   "devDependencies": {
+    "cssnano": "^5.0.15",
+    "postcss": "^8.2.15",
     "sass": "^1.46.0"
   }
 }
