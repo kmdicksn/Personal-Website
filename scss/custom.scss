@@ -154,9 +154,17 @@ nav .navbar-nav li a {
   border-radius: 10px;
 }
 
-.experience {
+section {
   height: fit-content;
+  padding-top: 150px;
+}
+
+.section-lighter {
   background-color: $primary-lighter;
+}
+
+.section-light {
+  background-color: $primary-light;
 }
 
 @import "../node_modules/bootstrap/scss/bootstrap";
