@@ -4,10 +4,6 @@ $primary-medium: #737B58;
 $primary-dark: #585C4A;
 $primary-darker: #4B5850;
 
-$desktop-width: 1200px;
-$tablet-width: 320px;
-$mobile-width: 480px;
-
 $body-bg: $primary-light;
 
 $theme-colors: (
@@ -24,23 +20,20 @@ body {
   height: 5000px;
 }
 
-.right-nav {
-  position: absolute;
-  right: 0;
-  display: flex;
-  gap: 60px;
-
-  @media (max-width: $desktop-width) {
-    gap: 15px;
-  }
+nav {
+  font-size: 12px;
+  height: 80px;
 }
 
-.navbar {
-  @media (min-width: $tablet-width) {
-    height: 120px;
-  }
+button.navbar-toggler:focus {
+  outline: 1px none;
+}
 
-  height: 40px;
+.right-nav {
+  position: absolute;
+  right: 80px;
+  display: flex;
+  gap: 15px;
 }
 
 nav .navbar-nav li a {
@@ -51,6 +44,13 @@ nav .navbar-nav li a {
   color: $primary-dark !important;
 }
 
+.btn-resume {
+  position: absolute;
+  right: 100px;
+  height: 1000px;
+  width: 5em;
+}
+
 .inline {
 
 }
@@ -59,14 +59,10 @@ nav .navbar-nav li a {
   display: flex;
   margin: auto;
   justify-content: center;
-  min-height: calc(100vh - 120px);
-  gap: 50px;
+  min-height: 100vh;
+  gap: 5%;
   flex-direction: column;
-  padding-bottom: 12%;
-
-  @media (min-width: $desktop-width) {
-    flex-direction: row;
-  }
+  padding-bottom: 25%;
 }
 
 .title-mouse {
@@ -113,32 +109,13 @@ nav .navbar-nav li a {
 }
 
 .hero-title {
-  @media (max-width: $desktop-width) {
-    font-size: 56px;
-    width: 70%;
-    margin: auto;
-  }
-
-  @media (max-width: $tablet-width) {
-    font-size: 30px;
-    width: 70%;
-    margin: auto;
-  }
-
-  font-size: 72px;
-  width: 40%;
-  margin: auto 0;
   color: $primary-dark;
+  margin: 5% auto;
 }
 
 .room {
-  @media (min-width: $desktop-width) {
-    margin: initial;
-    width: 35%;
-  }
-
   margin: 0 auto;
-  width: 50%;
+  width: 60%;
   -webkit-user-drag: none;
   user-select: none;
   -moz-user-select: none;
@@ -148,7 +125,7 @@ nav .navbar-nav li a {
 
 @keyframes cursor-animation {
   0%, 100% {
-    content: ""
+    content: " "
   }
   50% {
     content: "|"
@@ -156,8 +133,8 @@ nav .navbar-nav li a {
 }
 
 .text-cursor::after {
-  content: "";
-  position: absolute;
+  content: " ";
+  position: relative;
   -webkit-animation: cursor-animation 1s infinite;
   -o-animation: cursor-animation 1s infinite;
   animation: cursor-animation 1s infinite;
@@ -175,3 +152,49 @@ nav .navbar-nav li a {
 }
 
 @import "../node_modules/bootstrap/scss/bootstrap";
+@include media-breakpoint-up(sm) {
+  .hero-title {
+    font-size: 30px;  //mobile
+  }
+}
+@include media-breakpoint-up(md) {
+  nav {
+    font-size: initial;
+  }
+
+  .btn-resume {
+    right: 0;
+  }
+
+  .hero-title {
+    font-size: 48px;  //tablet
+  }
+
+  .room {
+    width: 50%;
+  }
+}
+@include media-breakpoint-up(lg) {
+  nav {
+    height: 120px;
+  }
+
+  .right-nav {
+    gap: 60px;
+  }
+
+  .hero-page {
+    flex-direction: row;
+  }
+
+  .hero-title {
+    font-size: 72px;
+    width: 40%;
+    margin: auto 0;
+  }
+
+  .room {
+    margin: initial;
+    width: 35%;
+  }
+}
