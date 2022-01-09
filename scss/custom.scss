@@ -73,18 +73,10 @@ nav .navbar-nav li a {
   padding-bottom: 25%;
 }
 
-.title-mouse {
-  display: flex;
-  flex-direction: column;
-  width: 40%;
-  margin: auto 0;
-  justify-content: center;
-}
-
 .mouse {
   width: 40px;
   height: 65px;
-  position: absolute;
+  position: fixed;
   left: calc(50% - 20px);
   bottom: 30px;
   border: 5px solid $primary-dark;
