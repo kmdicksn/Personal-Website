@@ -176,10 +176,17 @@ section {
   padding-top: 32px;
 }
 
+.console-header {
+  height: 40px;
+  background-color: #BDBBB6;
+  border-radius: 5px 5px 0px 0px;
+}
+
 .console-container {
   font-family: "Courier New", serif;
   background-color: $primary-darker;
   color: $primary-lighter;
+  padding: 40px;
 }
 
 @import "../node_modules/bootstrap/scss/bootstrap";
