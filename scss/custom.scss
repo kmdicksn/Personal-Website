@@ -5,6 +5,7 @@ $primary-dark: #585C4A;
 $primary-darker: #4B5850;
 
 $body-bg: $primary-light;
+$link-hover-color: $primary-medium;
 
 $theme-colors: (
         "primary": $primary-dark,
@@ -21,7 +22,6 @@ html {
 body {
   font-family: 'Lato', sans-serif;
   font-size: 25px;
-  height: 5000px;
 }
 
 nav {
@@ -38,7 +38,7 @@ nav {
 }
 
 nav .navbar-nav li a {
-  color: $primary-darker !important;
+  color: $primary-darker;
 }
 
 .first-element {
@@ -47,7 +47,7 @@ nav .navbar-nav li a {
 
 .navbar-brand {
   position: absolute;
-  color: $primary-darker !important;
+  color: $primary-darker;
 }
 
 .navbar-toggler {
@@ -76,11 +76,10 @@ nav .navbar-nav li a {
 .mouse {
   width: 40px;
   height: 65px;
-  position: fixed;
-  left: calc(50% - 20px);
+  margin: 0 auto;
+  margin-top: 32px;
   bottom: 30px;
   border: 5px solid $primary-dark;
-  box-sizing: border-box;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   border-radius: 50px;
 }
@@ -108,11 +107,6 @@ nav .navbar-nav li a {
   animation: scroll 2s infinite;
 }
 
-.hero-title {
-  color: $primary-dark;
-  margin: 5% auto;
-}
-
 .room {
   margin: 0 auto;
   width: 60%;
@@ -123,11 +117,26 @@ nav .navbar-nav li a {
   -ms-user-select: none;
 }
 
+.hero-right {
+  margin: 5% auto;
+}
+
+.hero-title {
+  padding-top: 92px;
+  color: $primary-dark;
+}
+
 @keyframes cursor-animation {
   0%, 100% {
     color: transparent;
   }
+  49% {
+    color: transparent;
+  }
   50% {
+    color: $primary-dark;
+  }
+  99% {
     color: $primary-dark;
   }
 }
@@ -159,6 +168,20 @@ section {
   background-color: $primary-light;
 }
 
+.heading {
+  text-align: center;
+}
+
+.work-section {
+  padding-top: 32px;
+}
+
+.console-container {
+  font-family: "Courier New", serif;
+  background-color: $primary-darker;
+  color: $primary-lighter;
+}
+
 @import "../node_modules/bootstrap/scss/bootstrap";
 @include media-breakpoint-up(sm) {
   .hero-title {
@@ -168,6 +191,10 @@ section {
 @include media-breakpoint-up(md) {
   nav {
     font-size: initial;
+  }
+
+  .nav-link {
+    background-color: transparent;
   }
 
   .first-element {
@@ -203,10 +230,13 @@ section {
     flex-direction: row;
   }
 
-  .hero-title {
-    font-size: 72px;
+  .hero-right {
     width: 40%;
     margin: auto 0;
+  }
+
+  .hero-title {
+    font-size: 72px;
   }
 
   .room {
