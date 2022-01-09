@@ -25,34 +25,38 @@ nav {
   height: 80px;
 }
 
-button.navbar-toggler:focus {
-  outline: 1px none;
+.hamburger {
+  margin: auto;
 }
 
-.right-nav {
-  position: absolute;
-  right: 80px;
-  display: flex;
-  gap: 15px;
+.navbar-nav > li{
+  padding-right: 15px;
 }
 
 nav .navbar-nav li a {
   color: $primary-darker !important;
 }
 
+.first-element {
+  padding-top: 70px;
+}
+
 .navbar-brand {
-  color: $primary-dark !important;
-}
-
-.btn-resume {
   position: absolute;
-  right: 100px;
-  height: 1000px;
-  width: 5em;
+  color: $primary-darker !important;
 }
 
-.inline {
+.navbar-toggler {
+  position: absolute;
+  right: 0;
+}
 
+.btn-primary {
+  position: absolute;
+  right: 0;
+  border-radius: 50px;
+  margin-right: 90px;
+  padding: 10000px;
 }
 
 .hero-page {
@@ -125,15 +129,15 @@ nav .navbar-nav li a {
 
 @keyframes cursor-animation {
   0%, 100% {
-    content: " "
+    color: transparent;
   }
   50% {
-    content: "|"
+    color: $primary-dark;
   }
 }
 
 .text-cursor::after {
-  content: " ";
+  content: "|";
   position: relative;
   -webkit-animation: cursor-animation 1s infinite;
   -o-animation: cursor-animation 1s infinite;
@@ -162,8 +166,16 @@ nav .navbar-nav li a {
     font-size: initial;
   }
 
+  .first-element {
+    padding-top: 0;
+  }
+
+  .last-element {
+    margin-right: 100px;
+  }
+
   .btn-resume {
-    right: 0;
+    margin-right: 0;
   }
 
   .hero-title {
@@ -179,8 +191,8 @@ nav .navbar-nav li a {
     height: 120px;
   }
 
-  .right-nav {
-    gap: 60px;
+  .navbar-nav > li{
+    padding-right: 60px;
   }
 
   .hero-page {
