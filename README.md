@@ -1,3 +1,3 @@
 # personal-website
 
-Access it at dickson-ngan.me
+View it at [dickson-ngan.me](https://dickson-ngan.me). Built on Bootstrap and deployed via AWS Amplify.
