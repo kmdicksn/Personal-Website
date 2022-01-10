@@ -76,13 +76,58 @@
             </div>
 
             <div class="project-section">
-                <a href="https://google.com"><div class="project">
-                    <h6>Sorting Visualizer</h6>
-                </div></a>
-                <a href="https://google.com"><div class="project">
-                </div></a>
-                <a href="https://google.com"><div class="project">
-                </div></a>
+                <div class="project">
+                    <div class="project-header">
+                        <h6>Sorting Visualizer</h6>
+                        <a href="https://google.com"><img class="logo" src="../public/github.svg" /></a>
+                    </div>
+                    <div class="project-body">
+                        <p>A visualizer of common sorting algorithms such as bubble sort and selection sort made in React using the Ant Design library to learn about
+                            hooks and styled components.
+                        </p>
+                        <div class="technologies-used">
+                            <span>React</span>
+                            <span>styled components</span>
+                            <span>JavaScript</span>
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>Chart.js</span>
+                            <span>ANT Design</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="project-header">
+                        <h6>Dinosaur Game Plus</h6>
+                        <a href="https://google.com"><img class="logo" src="../public/github.svg" /></a>
+                    </div>
+                    <div class="project-body">
+                        <p>A from-scratch remake of Chrome’s offline dinosaur game made to learn Python using the pygame library with additional features added such as an upgrade system and a start screen.<br>
+                        </p>
+                        <div class="technologies-used">
+                            <span>Python</span>
+                            <span>pygame</span>
+                            <span>REST APIs</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="project-header">
+                        <h6>Personal Website</h6>
+                        <a href="https://google.com"><img class="logo" src="../public/github.svg" /></a>
+                    </div>
+                    <div class="project-body">
+                        <p>My personal website designed in Figma, developed using Bootstrap, and deployed using AWS Amplify. I made this to learn more about web development and mobile-first design.<br>
+                        </p>
+                        <div class="technologies-used">
+                            <span>Bootstrap</span>
+                            <span>AWS</span>
+                            <span>JavaScript</span>
+                            <span>HTML</span>
+                            <span>SCSS</span>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <button class="btn btn-primary btn-more" onclick="githubClick()">Visit my Github</button>
@@ -125,23 +170,27 @@
             <h1>Thanks for your time, let's keep in touch!</h1>
         </div>
         <div class="contact-section">
-            <div class="contact-details">
+            <form id="contact-form" method="post" action="send" enctype="multipart/form-data">
+                <div class="contact-details">
+                        <label>
+                            <input type="text" class="input-field name-input" name="name" placeholder="Name" />
+                        </label>
+                        <label>
+                            <input type="text" class="input-field email-input" name="email" placeholder="Email" />
+                        </label>
+                        <label>
+                            <input type="text" class="input-field subject-input" name="subject" placeholder="Subject" />
+                        </label>
+                </div>
                 <label>
-                    <input type="text" class="input-field name-input" name="name" placeholder="Name" />
+                    <textarea class="email-body" name="message" placeholder="Message"></textarea>
                 </label>
-                <label>
-                    <input type="text" class="input-field email-input" name="email" placeholder="Email" />
-                </label>
-                <label>
-                    <input type="text" class="input-field subject-input" name="subject" placeholder="Subject" />
-                </label>
-            </div>
-            <textarea class="email-body" name="message" placeholder="Message"></textarea>
-            <button class="btn btn-submit btn-primary">Submit</button>
+            </form>
+            <button type="submit" value="submit" class="btn btn-submit btn-primary">Submit</button>
             <div class="contact-links">
-                <a href="https://google.com"><img class="logo" src="../public/mail.svg" alt="mail"></a>
-                <a href="https://google.com"><img class="logo" src="../public/linkedin.svg" alt="linked"></a>
-                <a href="https://google.com"><img class="logo" src="../public/github.svg" alt="github"></a>
+                <a href="mailto:dicksonngan101@gmail.com"><img class="logo" src="../public/mail.svg" alt="mail"></a>
+                <a href="https://www.linkedin.com/in/dickson-ngan/"><img class="logo" src="../public/linkedin.svg" alt="linked"></a>
+                <a href="https://github.com/kmdicksn"><img class="logo" src="../public/github.svg" alt="github"></a>
             </div>
         </div>
     </div>
