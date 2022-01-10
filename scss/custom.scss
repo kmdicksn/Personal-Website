@@ -19,6 +19,10 @@ html {
   scroll-behavior: smooth;
 }
 
+h1, h4 {
+  color: $primary-darker;
+}
+
 body {
   font-family: 'Lato', sans-serif;
   font-size: 25px;
@@ -60,7 +64,10 @@ nav .navbar-nav li a {
   right: 0;
   border-radius: 50px;
   margin-right: 90px;
-  padding: 10000px;
+
+  &:hover {
+    filter: brightness(125%);
+  }
 }
 
 .hero-page {
@@ -71,59 +78,59 @@ nav .navbar-nav li a {
   gap: 5%;
   flex-direction: column;
   padding-bottom: 25%;
-}
 
-.mouse {
-  width: 40px;
-  height: 65px;
-  margin: 0 auto;
-  margin-top: 32px;
-  bottom: 30px;
-  border: 5px solid $primary-dark;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  border-radius: 50px;
-}
-
-@keyframes scroll {
-  from {
-    opacity: 1;
+  .mouse {
+    width: 40px;
+    height: 65px;
+    margin: 0 auto;
+    margin-top: 32px;
+    bottom: 30px;
+    border: 5px solid $primary-dark;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 50px;
   }
-  to {
-    opacity: 0;
-    transform: translateY(20px);
+
+  @keyframes scroll {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+      transform: translateY(20px);
+    }
   }
-}
 
-.scroll-dot {
-  width: 8px;
-  height: 8px;
-  position: relative;
-  top: 16px;
-  border-radius: 100px;
-  background-color: $primary-dark;
-  margin: auto;
-  -webkit-animation: scroll 2s infinite;
-  -o-animation: scroll 2s infinite;
-  animation: scroll 2s infinite;
-}
+  .scroll-dot {
+    width: 8px;
+    height: 8px;
+    position: relative;
+    top: 16px;
+    border-radius: 100px;
+    background-color: $primary-dark;
+    margin: auto;
+    -webkit-animation: scroll 2s infinite;
+    -o-animation: scroll 2s infinite;
+    animation: scroll 2s infinite;
+  }
 
-.room {
-  margin: 0 auto;
-  width: 60%;
-  -webkit-user-drag: none;
-  user-select: none;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-}
+  .room {
+    margin: 0 auto;
+    width: 60%;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+  }
 
-.hero-right {
-  margin: 5% auto;
-}
+  .hero-right {
+    margin: 5% auto;
+  }
 
-.hero-title {
-  padding-top: 92px;
-  color: $primary-dark;
+  .hero-title {
+    padding-top: 92px;
+    color: $primary-dark;
+  }
 }
 
 @keyframes cursor-animation {
@@ -155,9 +162,10 @@ nav .navbar-nav li a {
   border-radius: 10px;
 }
 
-section {
+.page-section {
+  min-height: 100vh;
   height: fit-content;
-  padding-top: 150px;
+  padding-top: 120px;
 }
 
 .section-lighter {
@@ -174,6 +182,11 @@ section {
 
 .work-section {
   padding-top: 32px;
+
+  .job-title {
+    display: flex;
+    flex-direction: column;
+  }
 
   .date {
     float: right;
@@ -211,16 +224,73 @@ section {
   padding: 40px;
 }
 
+.contact-section {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  gap: 10px;
+
+  .contact-details {
+    padding-top: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .input-field {
+      width: 100%;
+      border-radius: 5px;
+      border: $primary-darker solid 1px;
+      padding: 5px 10px;
+      background-color: #fbfff9;
+    }
+  }
+
+  .email-body {
+    width: 100%;
+    resize: none;
+    border-radius: 5px;
+    border: $primary-darker solid 1px;
+    padding: 5px 10px;
+    background-color: #fbfff9;
+    min-height: 120px;
+  }
+
+  .btn-submit {
+    position: relative;
+    width: 100%;
+  }
+}
+
+.contact-links {
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+
+  .logo {
+    height: 32px;
+
+    &:hover {
+      filter: brightness(125%);
+    }
+  }
+}
+
 .btn-more {
   position: relative;
-  width: 150px;
+  width: 120px;
   left: calc(50% - 75px);
   margin: 0 auto 75px;
 }
 
+.footer {
+  height: fit-content;
+}
+
 @import "../node_modules/bootstrap/scss/bootstrap";
 @include media-breakpoint-up(sm) {
-  .hero-title {
+  .hero-page .hero-title {
     font-size: 30px;  //mobile
   }
 }
@@ -245,16 +315,23 @@ section {
     margin-right: 0;
   }
 
-  .hero-title {
-    font-size: 48px;  //tablet
-  }
+  .hero-page {
+    .hero-title {
+      font-size: 48px;  //tablet
+    }
 
-  .room {
-    width: 50%;
+    .room {
+      width: 50%;
+    }
   }
 
   .project-section {
     flex-direction: row;
+  }
+
+  .work-section .job-title {
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
 @include media-breakpoint-up(lg) {
@@ -268,19 +345,19 @@ section {
 
   .hero-page {
     flex-direction: row;
-  }
 
-  .hero-right {
-    width: 40%;
-    margin: auto 0;
-  }
+    .hero-right {
+      width: 40%;
+      margin: auto 0;
+    }
 
-  .hero-title {
-    font-size: 72px;
-  }
+    .hero-title {
+      font-size: 72px;
+    }
 
-  .room {
-    margin: initial;
-    width: 35%;
+    .room {
+      margin: initial;
+      width: 35%;
+    }
   }
 }

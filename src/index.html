@@ -44,7 +44,7 @@
     </div>
 </div>
 
-<section class="section-lighter" id="experience">
+<section class="section-lighter page-section" id="experience">
     <div class="container-md">
         <div class="experience">
             <div class="heading">
@@ -58,9 +58,9 @@
             </div>
 
             <div class="work-section">
-                <h4><span class="job-title">Ensightful</span></h4>
-                <h6>Junior Front-end Developer <span class="date">November 2021 - Present</span></h6>
-                <h6>Quality Assurance Test Engineer <span class="date">September 2021 - November 2021</span></h6>
+                <h4><span class="job-company">Ensightful</span></h4>
+                <h6 class="job-title">Junior Front-end Developer <span class="date">November 2021 - Present</span></h6>
+                <h6 class="job-title">Quality Assurance Test Engineer <span class="date">September 2021 - November 2021</span></h6>
                 <ul>
                     <li>Created front-end React components for loading progress, terms of service, and progress tracking for the enhancement of the user-facing web application.</li>
                     <li>blah</li>
@@ -89,7 +89,7 @@
     </div>
 </section>
 
-<section class="about-me" id="about">
+<section class="about-me page-section" id="about">
     <div class="container-md">
         <div class="heading">
             <h4>ABOUT</h4>
@@ -117,22 +117,32 @@
     </div>
 </section>
 
-<section class="section-lighter" id="contact">
+<section class="section-lighter page-section" id="contact">
     <div class="container-md">
         <div class="heading">
             <h4>CONTACT</h4>
             <h1>Thanks for your time, let's keep in touch!</h1>
         </div>
-    </div>
-
-    <div class="contact-section">
-        <label>
-            <input type="text" class="name-input" name="name" placeholder="Name" />
-        </label>
-        <label>
-            <input type="text" class="email-input" name="email" placeholder="Email" />
-        </label>
-        <textarea >
+        <div class="contact-section">
+            <div class="contact-details">
+                <label>
+                    <input type="text" class="input-field name-input" name="name" placeholder="Name" />
+                </label>
+                <label>
+                    <input type="text" class="input-field email-input" name="email" placeholder="Email" />
+                </label>
+                <label>
+                    <input type="text" class="input-field subject-input" name="subject" placeholder="Subject" />
+                </label>
+            </div>
+            <textarea class="email-body" name="message" placeholder="Message"></textarea>
+            <button class="btn btn-submit btn-primary">Submit</button>
+            <div class="contact-links">
+                <a href="https://google.com"><img class="logo" src="../public/mail.svg" alt="mail"></a>
+                <a href="https://google.com"><img class="logo" src="../public/linkedin.svg" alt="linked"></a>
+                <a href="https://google.com"><img class="logo" src="../public/github.svg" alt="github"></a>
+            </div>
+        </div>
     </div>
 </section>
 
