@@ -5,7 +5,7 @@
     <meta name="google-site-verification" content="HV3Ay382ueHhkfCt63Ii8KeYDTAznX8mBxBvrXOLiuE" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../scss/custom.scss">
-    <title>Dickson Ngan</title>
+    <title>Dickson Ngan | Personal Website</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,400;0,700;1,400&display=swap');
     </style>
@@ -184,7 +184,7 @@
                             <input type="text" class="input-field name-input" name="name" placeholder="Name" />
                         </label>
                         <label>
-                            <input type="text" class="input-field email-input" name="email" placeholder="Email" />
+                            <input type="email" class="input-field email-input" name="email" placeholder="Email" />
                         </label>
                         <label>
                             <input type="text" class="input-field subject-input" name="subject" placeholder="Subject" />
@@ -194,7 +194,7 @@
                     <textarea class="email-body" name="message" placeholder="Message"></textarea>
                 </label>
             </form>
-            <button type="submit" value="submit" class="btn btn-submit btn-primary">Submit</button>
+            <button onclick="submitToAPI(event)" type="submit" value="submit" class="btn btn-submit btn-primary">Submit</button>
             <div class="contact-links">
                 <a href="mailto:dicksonngan101@gmail.com"><img class="logo" src="../public/mail.svg" alt="mail"></a>
                 <a href="https://www.linkedin.com/in/dickson-ngan/"><img class="logo" src="../public/linkedin.svg" alt="linked"></a>
@@ -214,6 +214,7 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <script src="./index.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 
 </body>
 </html>
