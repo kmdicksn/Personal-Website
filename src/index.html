@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="google-site-verification" content="HV3Ay382ueHhkfCt63Ii8KeYDTAznX8mBxBvrXOLiuE" />
+    <meta name="google-site-verification" content="HV3Ay382ueHhkfCt63Ii8KeYDTAznX8mBxBvrXOLiuE"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../scss/custom.scss">
     <title>Dickson Ngan | Personal Website</title>
-    <meta name="description" content="Hey! I'm Dickson, a student studying Computer Science at the University of British Columbia currently working at Ensightful!" />
+    <meta name="description"
+          content="Hey! I'm Dickson, a student studying Computer Science at the University of British Columbia currently working at Ensightful!"/>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,400;0,700;1,400&display=swap');
     </style>
@@ -36,19 +37,23 @@
         </ul>
     </div>
     <button class="btn btn-primary btn-resume" onClick="resumeClick()" style="border-radius: 12px">Resume</button>
-    <button class="navbar-toggler shadow-none" style="right: 0;" type="button" data-toggle="collapse" data-target="#content" aria-controls="content" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler shadow-none" style="right: 0;" type="button" data-toggle="collapse"
+            data-target="#content" aria-controls="content" aria-expanded="false" aria-label="Toggle navigation">
         <img class="hamburger" src="../public/hamburger.svg" alt="hamburger"/>
     </button>
 </nav>
 
 <div class="container">
     <div class="hero-page">
-        <img class="room" src="../public/room.svg" />
+        <img class="room" src="../public/room.svg"/>
         <div class="hero-right">
             <h1 class="hero-title text-cursor">Hi there, I'm Dickson</h1>
-            <div class="scrolling-indicator" id="scrolling-indicator">
-                <img src="../public/scroll.svg" alt="scroll">
-            </div>
+            <a href="#experience">
+                <div class="scrolling-indicator" id="scrolling-indicator">
+                    <a href="#experience">
+                        <img class="selectable" src="../public/scroll.svg" alt="scroll">
+                    </a>
+                </div>
         </div>
     </div>
 </div>
@@ -70,13 +75,24 @@
             <div class="work-section">
                 <h4 class="job-company"><a class="job-link" href="https://www.ensightful.ca">Ensightful</a></h4>
                 <h6 class="job-title">Junior Front-end Developer <span class="date">November 2021 - Present</span></h6>
-                <h6 class="job-title">Quality Assurance Test Engineer <span class="date">September 2021 - November 2021</span></h6>
+                <h6 class="job-title">Quality Assurance Test Engineer <span
+                        class="date">September 2021 - November 2021</span></h6>
                 <ul>
-                    <li>Created front-end React components for loading progress, terms of service, and progress tracking for the enhancement of the user-facing web application.</li>
-                    <li>Wrote mobile-friendly and responsive email templates using HTML and CSS for notifying the end-user of any updates.</li>
-                    <li>Integrated and documented application components using Storybook to allow developers to test and integrate within an isolated environment.</li>
-                    <li>Wrote automated Selenium tests using Java to verify common paths through the application as well as regression tests on common bugs to prevent re-occurrence</li>
-                    <li>Worked in an Agile environment to perform manual QA in staging environment to identify, document, and fix bugs before they reach the end-user.</li>
+                    <li>Created front-end React components for loading progress, terms of service, and progress tracking
+                        for the enhancement of the user-facing web application.
+                    </li>
+                    <li>Wrote mobile-friendly and responsive email templates using HTML and CSS for notifying the
+                        end-user of any updates.
+                    </li>
+                    <li>Integrated and documented application components using Storybook to allow developers to test and
+                        integrate within an isolated environment.
+                    </li>
+                    <li>Wrote automated Selenium tests using Java to verify common paths through the application as well
+                        as regression tests on common bugs to prevent re-occurrence
+                    </li>
+                    <li>Worked in an Agile environment to perform manual QA in staging environment to identify,
+                        document, and fix bugs before they reach the end-user.
+                    </li>
                 </ul>
             </div>
 
@@ -85,58 +101,70 @@
             </div>
 
             <div class="project-section">
-                <div class="project">
-                    <div class="project-header">
-                        <h6>Sorting Visualizer</h6>
-                        <a href="https://github.com/kmdicksn/SortingVisualizerV2"><img class="logo" src="../public/github.svg" /></a>
+                <a href="https://github.com/kmdicksn/SortingVisualizerV2">
+                    <div class="project" style="background-color: #D5D6AA">
+                        <div class="project-header">
+                            <h5>Sorting Visualizer</h5>
+                            <img class="logo" src="../public/github.svg"/>
+                        </div>
+                        <div class="project-body">
+                            <p>A visualizer of common sorting algorithms made in React using the Ant Design library to
+                                learn about
+                                hooks and styled components.
+                            </p>
+                        </div>
+                        <div class="technologies-used">
+                            <span>React</span>
+                            <span>styled components</span>
+                            <span>JavaScript</span>
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>Ant Design</span>
+                            <span>Chart.js</span>
+                        </div>
                     </div>
-                    <div class="project-body">
-                        <p>A visualizer of common sorting algorithms made in React using the Ant Design library to learn about
-                            hooks and styled components.
-                        </p>
+                </a>
+                <a href="https://github.com/kmdicksn/DinoGamePlus">
+                    <div class="project" style="background-color: #DDBEA9">
+                        <div class="project-header">
+                            <h5>Dinosaur Game Plus</h5>
+                            <img class="logo"
+                                 src="../public/github.svg"/>
+                        </div>
+                        <div class="project-body">
+                            <p>A from-scratch remake of Chrome’s offline dinosaur game made to learn Python using the
+                                pygame
+                                library with additional features added such as an upgrade system and a start screen.<br>
+                            </p>
+                        </div>
+                        <div class="technologies-used">
+                            <span>Python</span>
+                            <span>pygame</span>
+                            <span>REST APIs</span>
+                        </div>
                     </div>
-                    <div class="technologies-used">
-                        <span>React</span>
-                        <span>styled components</span>
-                        <span>JavaScript</span>
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>Ant Design</span>
-                        <span>Chart.js</span>
+                </a>
+                <a href="https://github.com/kmdicksn/personal-website">
+                    <div class="project" style="background-color: #99BED2">
+                        <div class="project-header">
+                            <h5>Personal Website</h5>
+                            <img class="logo"
+                                 src="../public/github.svg"/>
+                        </div>
+                        <div class="project-body">
+                            <p>My personal website designed in Figma, developed using Bootstrap, and deployed using AWS
+                                Amplify. I made this to learn more about web development and mobile-first design.<br>
+                            </p>
+                        </div>
+                        <div class="technologies-used">
+                            <span>Bootstrap</span>
+                            <span>AWS</span>
+                            <span>JavaScript</span>
+                            <span>HTML</span>
+                            <span>SCSS</span>
+                        </div>
                     </div>
-                </div>
-                <div class="project">
-                    <div class="project-header">
-                        <h6>Dinosaur Game Plus</h6>
-                        <a href="https://github.com/kmdicksn/DinoGamePlus"><img class="logo" src="../public/github.svg" /></a>
-                    </div>
-                    <div class="project-body">
-                        <p>A from-scratch remake of Chrome’s offline dinosaur game made to learn Python using the pygame library with additional features added such as an upgrade system and a start screen.<br>
-                        </p>
-                    </div>
-                    <div class="technologies-used">
-                        <span>Python</span>
-                        <span>pygame</span>
-                        <span>REST APIs</span>
-                    </div>
-                </div>
-                <div class="project">
-                    <div class="project-header">
-                        <h6>Personal Website</h6>
-                        <a href="https://github.com/kmdicksn/personal-website"><img class="logo" src="../public/github.svg" /></a>
-                    </div>
-                    <div class="project-body">
-                        <p>My personal website designed in Figma, developed using Bootstrap, and deployed using AWS Amplify. I made this to learn more about web development and mobile-first design.<br>
-                        </p>
-                    </div>
-                    <div class="technologies-used">
-                        <span>Bootstrap</span>
-                        <span>AWS</span>
-                        <span>JavaScript</span>
-                        <span>HTML</span>
-                        <span>SCSS</span>
-                    </div>
-                </div>
+                </a>
             </div>
         </div>
     </div>
@@ -149,7 +177,10 @@
             <h1>Hello World!</h1>
         </div>
 
-        <img />
+        <img/>
+
+        <!--        <p>Hey, I'm Dickson! I'm a third-year student studying Computer Science-->
+        <!--        </p>-->
 
         <div class="console">
             <div class="console-header"></div>
@@ -181,25 +212,31 @@
         <div class="contact-section">
             <form id="contact-form" method="post" action="send" enctype="multipart/form-data">
                 <div class="contact-details">
-                        <label>
-                            <input type="text" class="input-field name-input" name="name" placeholder="Name" />
-                        </label>
-                        <label>
-                            <input type="email" class="input-field email-input" name="email" placeholder="Email" />
-                        </label>
-                        <label>
-                            <input type="text" class="input-field subject-input" name="subject" placeholder="Subject" />
-                        </label>
+                    <label>
+                        <input type="text" class="input-field name-input" name="name" placeholder="Name"/>
+                    </label>
+                    <label>
+                        <input type="email" class="input-field email-input" name="email" placeholder="Email"/>
+                    </label>
+                    <label>
+                        <input type="text" class="input-field subject-input" name="subject" placeholder="Subject"/>
+                    </label>
                 </div>
                 <label class="w-100" style="padding-top: 10px">
                     <textarea class="email-body" name="message" placeholder="Message"></textarea>
                 </label>
             </form>
-            <button onclick="submitToAPI(event)" type="submit" value="submit" class="btn btn-submit btn-primary">Submit</button>
+            <button onclick="submitToAPI(event)" type="submit" value="submit" class="btn btn-submit btn-primary">
+                Submit
+            </button>
             <div class="contact-links">
-                <a href="mailto:dicksonngan101@gmail.com"><img class="logo" src="../public/mail.svg" alt="mail"></a>
-                <a href="https://www.linkedin.com/in/dickson-ngan/"><img class="logo" src="../public/linkedin.svg" alt="linked"></a>
-                <a href="https://github.com/kmdicksn"><img class="logo" src="../public/github.svg" alt="github"></a>
+                <a href="mailto:dicksonngan101@gmail.com"><img class="logo selectable" src="../public/mail.svg"
+                                                               alt="mail"></a>
+                <a href="https://www.linkedin.com/in/dickson-ngan/"><img class="logo selectable"
+                                                                         src="../public/linkedin.svg"
+                                                                         alt="linked"></a>
+                <a href="https://github.com/kmdicksn"><img class="logo selectable" src="../public/github.svg"
+                                                           alt="github"></a>
             </div>
         </div>
     </div>
@@ -211,9 +248,15 @@
     </div>
 </section>
 
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
 <script src="./index.js"></script>
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 
